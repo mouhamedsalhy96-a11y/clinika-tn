@@ -107,9 +107,14 @@ export default async function PatientsPage() {
                       key={patient.id}
                       className="transition hover:bg-slate-50"
                     >
-                      <td className="px-6 py-4 font-medium text-slate-900">
-                        {patient.last_name} {patient.first_name}
-                      </td>
+                      <td className="px-6 py-4 font-medium">
+                        <Link
+                            href={`/patients/${patient.id}`}
+                            className="text-slate-900 hover:text-teal-700"
+                        >
+                            {patient.last_name} {patient.first_name}
+                        </Link>
+                       </td>
 
                       <td className="px-6 py-4 text-slate-600">
                         {patient.date_of_birth
